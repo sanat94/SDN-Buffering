@@ -19,9 +19,9 @@ def killProcesses():
 def connectStartFFMEG():
     print('Starting ffplay')
     args1 = ["ffplay","-probesize","32","-listen","1","rtmp://localhost:1935"]
-   # args2 = ["ffmpeg","-f","v4l2","-i","/dev/video0","-f","flv","rtmp://172.16.0.119:1234","-f","flv","rtmp://172.16.0.119:1235","-f","flv","rtmp://172.16.0.119:1236","-f","flv","rtmp://localhost:1935"]
+    args2 = ["ffmpeg","-f","v4l2","-i","/dev/video0","-f","flv","rtmp://172.16.0.119:1234","-f","flv","rtmp://172.16.0.119:1235","-f","flv","rtmp://172.16.0.119:1236","-f","flv","rtmp://localhost:1935"]
 
-    args2 = ["ffmpeg","-f","v4l2","-i","/dev/video0","-f","flv","rtmp://localhost:1935"]
+    #args2 = ["ffmpeg","-f","v4l2","-i","/dev/video0","-f","flv","rtmp://localhost:1935"]
     process1 = subprocess.Popen(args1, shell= False)
     process2 = subprocess.Popen(args2, shell= False)
     ffplayPID.append(process1)
